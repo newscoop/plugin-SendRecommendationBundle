@@ -1,0 +1,73 @@
+{% extends 'NewscoopNewscoopBundle::admin_layout.html.twig' %}
+
+{% block admin_title %}{{ 'plugin.recommendation.label.menu'|trans }}{% endblock %}
+{% block admin_page_title_content %}{{ 'plugin.recommendation.titlecontent'|trans }}{% endblock %}
+
+{% block admin_stylesheets %}
+<style>
+#send-recommendation-settingsTable {float: left; margin-top: 0px; margin-right: 25px;}
+.send-recommendation-bg {background-color: #ECECEC;}
+.send-recommendation-border {border-right: 1px solid #9d9d9d;}
+.send-recommendation-size {width: 250px;}
+.alert {color: #C00; padding: 0; margin: 0;}
+</style>
+{% endblock %}
+{% block admin_scripts %}{% endblock %}
+
+{% block admin_content %}
+{% for flashMessage in app.session.flashbag.get('error') %}
+    <div class="alerts alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+{% for flashMessage in app.session.flashbag.get('success') %}
+    <div class="alerts alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+<form action="{{ path('newscoop_sendrecommendation_admin_index') }}" method="post" {{ form_enctype(form) }} >
+    <table id="send-recommendation-settingsTable" border="0" cellspacing="0" cellpadding="0" class="box_table">
+        <tbody>
+            <tr>
+                <td class="send-recommendation-border"></td>
+            </tr>
+
+            <tr class="send-recommendation-bg">
+                <td align="left" class="send-recommendation-size send-recommendation-border">   
+                    {{ form_label(form.toEmail) }} <br>
+                    <small>{{ 'plugin.recommendation.label.toemailsmall'|trans }}</small>
+                </td>
+            </tr>
+            <tr>
+                <td class="send-recommendation-border">
+                    {{ form_widget(form.toEmail, {'attr' : {'class' : 'form-control'}}) }}
+                </td>
+            </tr>
+
+            <tr class="send-recommendation-bg">
+                <td align="left" class="send-recommendation-size send-recommendation-border">   
+                    {{ form_label(form.allowNonUsers) }} <br>
+                    <small>{{ 'plugin.recommendation.label.allownonusers'|trans }}</small>
+                </td>
+            </tr>
+            <tr>
+                <td class="send-recommendation-border">
+                    {{ form_widget(form.allowNonUsers, {'attr' : {'class' : 'form-control'}}) }}
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right" style="padding-top: 10px;">
+                    <button type="submit" class="btn btn-primary">{{ 'plugin.recommendation.btn.save'|trans }}</button>
+                </td>
+            </tr>
+            {{ form_rest(form) }}
+        </tbody>
+    </table>
+</form>
+{% endblock %}

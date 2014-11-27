@@ -1,0 +1,23 @@
+{
+    "name": "newscoop/send-recommendation-plugin",
+    "description": "Send recommendation plugin.",
+    "keywords": ["newscoop" "email", "cms", "widget"],
+    "version": "1.0",
+    "type": "newscoop-plugin",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Mischa Gorinskat",
+            "email": "mischa.gorinskat@sourcefabric.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "newscoop/plugins-installer": ">=v0.2"
+    },
+    "autoload": {
+        "psr-0": { "Newscoop\\SendRecommendationBundle": "" }
+    },
+    "target-dir": "Newscoop/SendRecommendationBundle",
+    "minimum-stability": "dev"
+}
