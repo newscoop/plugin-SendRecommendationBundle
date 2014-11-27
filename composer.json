@@ -1,7 +1,7 @@
 {
     "name": "newscoop/send-recommendation-plugin",
     "description": "Send recommendation plugin.",
-    "keywords": ["newscoop" "email", "cms", "widget"],
+    "keywords": ["newscoop", "email", "cms", "widget"],
     "version": "1.0",
     "type": "newscoop-plugin",
     "license": "GPL-3.0",
