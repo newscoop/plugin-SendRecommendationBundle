@@ -9,7 +9,7 @@ plugin:
       subject: "Subject"
       message: "Message"
       toemailsmall: "E-mail address"
-      toemail: "E-mail address to which recommendation messages will be sent."
+      toemail: "E-mail address to which recommendations will be sent."
       yesoption: "Yes"
       nooption: "No"
     msg:

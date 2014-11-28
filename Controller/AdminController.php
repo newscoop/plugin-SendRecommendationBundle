@@ -13,7 +13,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Newscoop\SendFeedbackBundle\Form\Type\SettingsType;
+use Newscoop\SendRecommendationBundle\Form\Type\SettingsType;
 
 class AdminController extends Controller
 {
