@@ -20,7 +20,7 @@ plugin:
       from: "From: %userLink%"
       send: "Sent by: %siteLink%"
     page:
-      title: "Recommand a person"
+      title: "Recommend a person"
     form:
       button:
         send: "Send"
