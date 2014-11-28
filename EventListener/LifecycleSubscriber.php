@@ -64,9 +64,9 @@ class LifecycleSubscriber implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-            'plugin.install.newscoop_send_feedback_plugin' => array('install', 1),
-            'plugin.update.newscoop_send_feedback_plugin' => array('update', 1),
-            'plugin.remove.newscoop_send_feedback_plugin' => array('remove', 1),
+            'plugin.install.newscoop_send_recommendation_plugin' => array('install', 1),
+            'plugin.update.newscoop_send_recommendation_plugin' => array('update', 1),
+            'plugin.remove.newscoop_send_recommendation_plugin' => array('remove', 1),
         );
     }
 

@@ -19,62 +19,62 @@ class SendRecommendationType extends AbstractType
     {
         $builder
             ->add('person_name', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.person_name',
+                'label' => 'plugin.recommendation.form.recommendation.label.person_name',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('person_job', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.person_job',
+                'label' => 'plugin.recommendation.form.recommendation.label.person_job',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('person_phone', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.person_phone',
+                'label' => 'plugin.recommendation.form.recommendation.label.person_phone',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('person_email', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.persone_mail',
+                'label' => 'plugin.recommendation.form.recommendation.label.persone_mail',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('person_recommendation', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.person_recommendation',
+                'label' => 'plugin.recommendation.form.recommendation.label.person_recommendation',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('recommendee_name', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.recommendee_name',
+                'label' => 'plugin.recommendation.form.recommendation.label.recommendee_name',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('recommendee_job', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.recommendee_job',
+                'label' => 'plugin.recommendation.form.recommendation.label.recommendee_job',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('recommendee_phone', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.recommendee_phone',
+                'label' => 'plugin.recommendation.form.recommendation.label.recommendee_phone',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('recommendee_email', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.recommendee_email',
+                'label' => 'plugin.recommendation.form.recommendation.label.recommendee_email',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('recommendee_expertise', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.recommendee_expertise',
+                'label' => 'plugin.recommendation.form.recommendation.label.recommendee_expertise',
                 'error_bubbling' => true,
                 'required' => true
             ))
             ->add('recommendee_achievements', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.recommendee_achievements',
+                'label' => 'plugin.recommendation.form.recommendation.label.recommendee_achievements',
                 'error_bubbling' => true,
                 'required' => false
             ))
             ->add('recommendee_notes', null, array(
-                'label' => 'plugin.feedback.form.recommendation.label.recommendee_notes',
+                'label' => 'plugin.recommendation.form.recommendation.label.recommendee_notes',
                 'error_bubbling' => true,
                 'required' => false
             ));

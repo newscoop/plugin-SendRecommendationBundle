@@ -1,6 +1,6 @@
 Plugins: null
 plugin:
-    feedback:
+    recommendation:
         btn:
             save: null
         titlecontent: null

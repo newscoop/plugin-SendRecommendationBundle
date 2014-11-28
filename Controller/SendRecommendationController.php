@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Newscoop\EventDispatcher\Events\GenericEvent;
 
 /**
- * Send feedback controller
+ * Send recommendation controller
  */
 class SendRecommendationController extends Controller
 {
@@ -50,7 +50,7 @@ class SendRecommendationController extends Controller
                 $body = '';
                 foreach ($data AS $name => $value) {
                     
-                    $body .= $translator->trans('plugin.feedback.form.recommendation.label.'.$name).': '.$value .'<br>';
+                    $body .= $translator->trans('plugin.recommendation.form.recommendation.label.'.$name).': '.$value .'<br>';
                 }
 
                 $emailService = $this->container->get('email');
@@ -58,7 +58,7 @@ class SendRecommendationController extends Controller
 
                 $response['response'] = array(
                     'status' => true,
-                    'message' => $translator->trans('plugin.feedback.msg.success')
+                    'message' => $translator->trans('plugin.recommendation.msg.success')
                 );
 
             } else {
