@@ -16,7 +16,7 @@ plugin:
       saved: "Successfully saved"
       error: "Error occurred while saving changes."
       success: "Your message has been sent."
-      notfilled: "Feedback content was not filled in."
+      notfilled: "Recommendation content was not filled in."
     email:
       subject: "New recommendation from %name%"
       from: "From: %userLink%"

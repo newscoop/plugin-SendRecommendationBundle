@@ -26,7 +26,7 @@ class AdminController extends Controller
         $preferencesService = $this->container->get('system_preferences_service');
         $translator = $this->container->get('translator');
         $form = $this->container->get('form.factory')->create(new SettingsType(), array(
-            'toEmail' => $preferencesService->SendFeedbackEmail,
+            'toEmail' => $preferencesService->SendRecommendationEmail,
         ), array());
         
         if ($request->isMethod('POST')) {

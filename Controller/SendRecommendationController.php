@@ -31,7 +31,7 @@ class SendRecommendationController extends Controller
         $translator = $this->container->get('translator');
         $em = $this->container->get('em');
         $preferencesService = $this->container->get('system_preferences_service');
-        $to = $preferencesService->SendFeedbackEmail;
+        $to = $preferencesService->SendRecommendationEmail;
         $defaultFrom = $preferencesService->EmailFromAddress;
         $response = array();
         $parameters = $request->request->all();
