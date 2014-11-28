@@ -35,7 +35,7 @@ class AdminController extends Controller
                 $data = $form->getData();
 
                 $preferencesService->set('SendRecommendationEmail', $data['toEmail']);
-                $this->get('session')->getFlashBag()->add('success', $translator->trans('plugin.recommendation.msg.success'));
+                $this->get('session')->getFlashBag()->add('success', $translator->trans('plugin.recommendation.msg.saved'));
 
                 return $this->redirect($this->generateUrl('newscoop_sendrecommendation_admin_index'));
                 
