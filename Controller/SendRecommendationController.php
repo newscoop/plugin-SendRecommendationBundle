@@ -12,6 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Newscoop\SendRecommendationBundle\Form\Type\SendRecommendationType;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -23,10 +24,25 @@ use Newscoop\EventDispatcher\Events\GenericEvent;
 class SendRecommendationController extends Controller
 {
     /**
-     * @Route("/plugin/send-recommendation")
+     * @Route("recommendation/send")
+     */
+    public function showAction(Request $request)
+    {
+        $translator = $this->container->get('translator');
+        $templatesService = $this->container->get('newscoop.templates.service');
+
+        $response = new Response();
+        $response->headers->set('Content-Type', 'text/html');
+        $response->setContent($templatesService->fetchTemplate('_view/form-recommendation.tpl'));
+
+        return $response;
+    }
+
+    /**
+     * @Route("/recommendation/post")
      * @Method("POST")
      */
-    public function indexAction(Request $request)
+    public function postAction(Request $request)
     {
         $translator = $this->container->get('translator');
         $em = $this->container->get('em');

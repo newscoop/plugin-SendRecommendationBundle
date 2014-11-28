@@ -10,8 +10,6 @@ plugin:
       message: "Message"
       toemailsmall: "E-mail address"
       toemail: "E-mail address to which recommendations will be sent."
-      yesoption: "Yes"
-      nooption: "No"
     msg:
       saved: "Successfully saved"
       error: "Error occurred while saving changes."
@@ -21,18 +19,23 @@ plugin:
       subject: "New recommendation from %name%"
       from: "From: %userLink%"
       send: "Sent by: %siteLink%"
+    page:
+      title: "Recommand a person"
     form:
-      recommendation:
-        label:
-          person_name: "Person name"
-          person_job: "Person job"
-          person_phone: "Person phone"
-          person_email: "Person email"
-          person_recommendation: "Recommendation"
-          recommendee_name: "Recommendee name"
-          recommendee_job: "Recommendee job"
-          recommendee_phone: "Recommendee phone"
-          recommendee_email: "Recommendee email"
-          recommendee_expertise: "Recommendee expertise"
-          recommendee_achievements: "Recommendee achievements"
-          recommendee_notes: "Recommendee notes"
+      button:
+        send: "Send"
+      label:
+        person_group_label: "The recommending person's details"
+        person_name: "Name"
+        person_job: "Job"
+        person_phone: "Phone"
+        person_email: "Email"
+        person_recommendation: "Recommendation"
+        recommendee_group_label: "Recommend a woman"          
+        recommendee_name: "Name"
+        recommendee_job: "Job"
+        recommendee_phone: "Phone"
+        recommendee_email: "Email"
+        recommendee_expertise: "Expertise"
+        recommendee_achievements: "Achievements"
+        recommendee_notes: "Notes"
