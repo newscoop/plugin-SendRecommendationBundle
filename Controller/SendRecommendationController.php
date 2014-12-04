@@ -49,7 +49,6 @@ class SendRecommendationController extends Controller
     public function postAction(Request $request)
     {
         $translator = $this->container->get('translator');
-        $em = $this->container->get('em');
         $preferencesService = $this->container->get('system_preferences_service');
         $to = $preferencesService->SendRecommendationEmail;
         $defaultFrom = $preferencesService->EmailFromAddress;
@@ -70,6 +69,12 @@ class SendRecommendationController extends Controller
                 $body = '';
                 foreach ($data AS $name => $value) {
 
+                    if ($name == 'person_name') {
+                        $body .= '<b>'.$translator->trans('plugin.recommendation.form.label.person_group_label').'</b><br>';
+                    } elseif ($name == 'recommendee_name') {
+                        $body .= '<br><b>'.$translator->trans('plugin.recommendation.form.label.recommendee_group_label').'</b><br>';
+                    }
+
                     $body .= $translator->trans('plugin.recommendation.form.label.'.$name).': '.$value .'<br>';
                 }
 
@@ -85,7 +90,7 @@ class SendRecommendationController extends Controller
 
                 $response['response'] = array(
                     'status' => false,
-                    'message' => 'Invalid Form'
+                    'message' => $translator->trans('plugin.recommendation.msg.invalid')
                 );
             }
 
