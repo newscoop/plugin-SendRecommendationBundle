@@ -24,7 +24,8 @@ use Newscoop\EventDispatcher\Events\GenericEvent;
 class SendRecommendationController extends Controller
 {
     /**
-     * @Route("recommendation/send")
+     * @Route("/recommendation/send")
+     * @Route("/{lang}/recommendation/send")
      */
     public function showAction(Request $request)
     {
@@ -61,12 +62,12 @@ class SendRecommendationController extends Controller
                 $data = $form->getData();
                 $date = new \DateTime("now");
 
-                $subject = $translator->trans('Tralalal');
+                $subject = $translator->trans('plugin.recommendation.email.subject', array('%name%' => $data['person_name']), 'messages');
 
                 $body = '';
                 foreach ($data AS $name => $value) {
-                    
-                    $body .= $translator->trans('plugin.recommendation.form.recommendation.label.'.$name).': '.$value .'<br>';
+
+                    $body .= $translator->trans('plugin.recommendation.form.label.'.$name).': '.$value .'<br>';
                 }
 
                 $emailService = $this->container->get('email');
