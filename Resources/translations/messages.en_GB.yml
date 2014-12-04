@@ -20,7 +20,7 @@ plugin:
       from: "From: %userLink%"
       send: "Sent by: %siteLink%"
     page:
-      title: "Recommend a person"
+      title: "Recommend a woman"
     form:
       button:
         send: "Send"
@@ -31,7 +31,7 @@ plugin:
         person_phone: "Phone"
         person_email: "Email"
         person_recommendation: "Recommendation"
-        recommendee_group_label: "Recommend a woman"          
+        recommendee_group_label: "Recommend a woman"
         recommendee_name: "Name"
         recommendee_job: "Job"
         recommendee_phone: "Phone"
