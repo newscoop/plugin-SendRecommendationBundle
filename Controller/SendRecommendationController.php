@@ -27,10 +27,13 @@ class SendRecommendationController extends Controller
      * @Route("/recommendation/send")
      * @Route("/{lang}/recommendation/send")
      */
-    public function showAction(Request $request)
+    public function showAction(Request $request, $lang = 'ar')
     {
-        $translator = $this->container->get('translator');
         $templatesService = $this->container->get('newscoop.templates.service');
+        $smarty = $templatesService->getSmarty();
+        $gimme =  $smarty->context();
+        $gimme->language = \MetaLanguage::createFromCode($lang);
+        $smarty->assign('gimme', $gimme);
 
         $response = new Response();
         $response->headers->set('Content-Type', 'text/html');
