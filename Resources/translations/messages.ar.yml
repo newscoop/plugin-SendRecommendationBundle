@@ -2,7 +2,7 @@ Plugins: "Plugins"
 plugin:
   recommendation:
     btn:
-      save: Save
+      save: "Save"
     titlecontent: "Send Recommendation settings"
     label:
       menu: "Send Recommendation"
@@ -15,10 +15,9 @@ plugin:
       error: "Error occurred while saving changes."
       success: "Your message has been sent."
       notfilled: "Recommendation content was not filled in."
+      invalid: "The form is invalid. Please make sure all required fields are filled."
     email:
       subject: "New recommendation from %name%"
-      from: "From: %userLink%"
-      send: "Sent by: %siteLink%"
     page:
       title: "إقترح إمرأة قيادية"
     form:
