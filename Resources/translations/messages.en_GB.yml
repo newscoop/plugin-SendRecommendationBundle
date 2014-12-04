@@ -1,0 +1,41 @@
+Plugins: "Plugins"
+plugin:
+  recommendation:
+    btn:
+      save: Save
+    titlecontent: "Send Recommendation settings"
+    label:
+      menu: "Send Recommendation"
+      subject: "Subject"
+      message: "Message"
+      toemailsmall: "E-mail address"
+      toemail: "E-mail address to which recommendations will be sent."
+    msg:
+      saved: "Successfully saved"
+      error: "Error occurred while saving changes."
+      success: "Your message has been sent."
+      notfilled: "Recommendation content was not filled in."
+    email:
+      subject: "New recommendation from %name%"
+      from: "From: %userLink%"
+      send: "Sent by: %siteLink%"
+    page:
+      title: "Recommend a woman"
+    form:
+      button:
+        send: "Send"
+      label:
+        person_group_label: "The recommending person's details"
+        person_name: "Name"
+        person_job: "Job"
+        person_phone: "Phone"
+        person_email: "Email"
+        person_recommendation: "Recommendation"
+        recommendee_group_label: "Recommend a woman"
+        recommendee_name: "Name"
+        recommendee_job: "Job"
+        recommendee_phone: "Phone"
+        recommendee_email: "Email"
+        recommendee_expertise: "Expertise"
+        recommendee_achievements: "Achievements"
+        recommendee_notes: "Notes"

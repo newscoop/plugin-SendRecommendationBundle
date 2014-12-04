@@ -1,0 +1,41 @@
+Plugins: "Plugins"
+plugin:
+  recommendation:
+    btn:
+      save: Save
+    titlecontent: "Send Recommendation settings"
+    label:
+      menu: "Send Recommendation"
+      subject: "Subject"
+      message: "Message"
+      toemailsmall: "E-mail address"
+      toemail: "E-mail address to which recommendations will be sent."
+    msg:
+      saved: "Successfully saved"
+      error: "Error occurred while saving changes."
+      success: "Your message has been sent."
+      notfilled: "Recommendation content was not filled in."
+    email:
+      subject: "New recommendation from %name%"
+      from: "From: %userLink%"
+      send: "Sent by: %siteLink%"
+    page:
+      title: "إقترح إمرأة قيادية"
+    form:
+      button:
+        send: "إرسال"
+      label:
+        person_group_label: "تفاصيل مقدم التزكية"
+        person_name: "العمل"
+        person_job: "العمل"
+        person_phone: "رقم الهاتف"
+        person_email: "ألبريد الالكتروني"
+        person_recommendation: "لماذا تزكي هذه الشخصية؟"
+        recommendee_group_label: "إقترح إمرأة قيادية"
+        recommendee_name: "العمل"
+        recommendee_job: "العمل"
+        recommendee_phone: "رقم الهاتف"
+        recommendee_email: "ألبريد الالكتروني"
+        recommendee_expertise: "مجال التخصص"
+        recommendee_achievements: "الإنجازات"
+        recommendee_notes: "ملاحظات"

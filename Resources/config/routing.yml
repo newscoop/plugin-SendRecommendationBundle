@@ -1,0 +1,4 @@
+newscoop_send_recommendation:
+    resource: "@NewscoopSendRecommendationBundle/Controller/"
+    type: annotation
+    prefix: /
