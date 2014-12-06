@@ -34,6 +34,7 @@ class SendRecommendationController extends Controller
         $gimme =  $smarty->context();
         $gimme->language = \MetaLanguage::createFromCode($lang);
         $smarty->assign('gimme', $gimme);
+        $request->setLocale($lang);
 
         $response = new Response();
         $response->headers->set('Content-Type', 'text/html');
