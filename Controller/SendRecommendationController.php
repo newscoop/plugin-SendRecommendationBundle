@@ -45,9 +45,10 @@ class SendRecommendationController extends Controller
 
     /**
      * @Route("/recommendation/post")
+     * @Route("/{lang}/recommendation/post")
      * @Method("POST")
      */
-    public function postAction(Request $request)
+    public function postAction(Request $request, $lang = 'ar')
     {
         $translator = $this->container->get('translator');
         $preferencesService = $this->container->get('system_preferences_service');
@@ -55,6 +56,7 @@ class SendRecommendationController extends Controller
         $defaultFrom = $preferencesService->EmailFromAddress;
         $response = array();
         $parameters = $request->request->all();
+        $request->setLocale($lang);
 
         $form = $this->container->get('form.factory')->create(new SendRecommendationType(), array(), array());
 
